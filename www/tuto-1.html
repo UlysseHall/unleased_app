@@ -1,0 +1,19 @@
+
+<main class="loading_screen" data-tuto="1">
+    <div class="app">
+        <img src="img/logo.svg" alt="">
+        <img src="img/unleased.svg" alt="">
+        <h3 class="sous_titre">L'aventure urbaine</h3>
+    </div>
+
+</main>
+
+<script>
+    $(function() {
+            $("body").click(function () {
+                if($('main').attr('data-tuto') === "1") {
+                    router.loadPage("tuto-2.html");
+                }
+            });
+    });
+</script>

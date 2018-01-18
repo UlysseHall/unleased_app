@@ -1,0 +1,37 @@
+<a class="link" data-page="home.html" href="#">Retour</a>
+<h3>Passe aventurier grâce à un code de parrainage</h3>
+
+<form method="post" id="register_form">
+    <label>Email</label>
+    <input type="email" name="email" id="email"><br>
+
+    <label>Nom d'utilisateur</label>
+    <input type="text" name="username" id="username"><br>
+
+    <label>Mot de passe</label>
+    <input type="password" name="password" id="password"><br>
+
+    <label>Code de parrainage</label>
+    <input type="text" name="code" id="code"><br><br>
+
+    <input type="submit">
+</form>
+
+<script>
+    $(function() {
+            $('#register_form').submit(function(e) {
+                e.preventDefault();
+                var email = $('#email').val();
+                var username = $('#username').val();
+                var password = $('#password').val();
+                var code = $('#code').val();
+
+                $.post(api_url + "register", {email: email, username: username, password: password, code: code}, function(data) {
+                    if(data.success === true) {
+                        localStorage.token = data.token;
+                        router.loadPage("home.html");
+                    }
+                });
+            });
+    });
+</script>

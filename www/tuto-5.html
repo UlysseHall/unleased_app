@@ -1,0 +1,24 @@
+
+        <main class="loading_screen" data-tuto="5">
+            <div class="app">
+                <img src="img/lamp.svg" alt="">
+                <h4 class="loading5">Si tu reçois une invitation, tu pourras alors devenir aventurier et profiter pleinement de Unleased.</h4>
+
+                <div class="bulletpoint">
+                    <div class="bullet"></div>
+                    <div class="bullet"></div>
+                    <div class="bullet"></div>
+                    <div class="bullet active"></div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            $(function() {
+                $("body").click(function () {
+                    if($('main').attr('data-tuto') === "5") {
+                        router.loadPage("home.html");
+                    }
+                });
+            });
+        </script>

@@ -1,0 +1,24 @@
+
+<main class="loading_screen" data-tuto="2">
+    <img src="img/logo.svg" alt="" class="logo_opacity">
+    <div class="app">
+        <img src="img/bagpack.svg" alt="" class="img_loading">
+        <h4 class="loading3">Unleased souhaite préserver les codes de l’Urbex</h4>
+        <div class="bulletpoint">
+            <div class="bullet active"></div>
+            <div class="bullet"></div>
+            <div class="bullet"></div>
+        </div>
+    </div>
+    <img src="img/round.svg" alt="" class="round">
+</main>
+
+        <script>
+            $(function() {
+                $("body").click(function () {
+                    if($('main').attr('data-tuto') === "2") {
+                        router.loadPage("tuto-3.html");
+                    }
+                });
+            });
+        </script>

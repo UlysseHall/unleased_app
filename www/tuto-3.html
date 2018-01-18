@@ -1,0 +1,24 @@
+
+<main class="loading_screen" data-tuto="3">
+    <img src="img/logo.svg" alt="" class="logo_opacity">
+    <div class="app">
+        <img src="img/boussole.svg" alt="" class="img_loading">
+        <h4 class="loading3">Pour le moment tu es scout, tu as donc un accès limité à l’application</h4>
+        <div class="bulletpoint">
+            <div class="bullet"></div>
+            <div class="bullet active"></div>
+            <div class="bullet"></div>
+        </div>
+    </div>
+    <img src="img/round.svg" alt="" class="round">
+</main>
+
+        <script>
+            $(function() {
+                $("body").click(function () {
+                    if($('main').attr('data-tuto') === "3") {
+                        router.loadPage("tuto-4.html");
+                    }
+                });
+            });
+        </script>

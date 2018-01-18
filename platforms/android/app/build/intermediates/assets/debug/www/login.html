@@ -1,0 +1,31 @@
+<a class="link" data-page="home.html" href="#">Retour</a>
+<h3>Connexion au compte aventurier</h3>
+
+<form method="post" id="login_form">
+    <label>Nom d'utilisateur ou E-mail</label>
+    <input type="text" name="username" id="username"><br>
+
+    <label>Mot de passe</label>
+    <input type="password" name="password" id="password"><br>
+
+    <input type="submit">
+</form>
+
+<script>
+    $(function() {
+        $(function() {
+            $('#login_form').submit(function(e) {
+                e.preventDefault();
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                $.post(api_url + "login", {username: username, password: password}, function(data) {
+                    if(data.success === true) {
+                        localStorage.token = data.token;
+                        router.loadPage("home.html");
+                    }
+                });
+            });
+        });
+    });
+</script>

@@ -1,0 +1,25 @@
+
+<main class="loading_screen" data-tuto="4">
+    <img src="img/logo.svg" alt="" class="logo_opacity">
+    <div class="app">
+        <img src="img/lamp.svg" alt="" class="img_loading">
+        <h4 class="loading3">Avec le code de parrainage, tu peux devenir aventurier et  débloquer des niveaux </h4>
+
+        <div class="bulletpoint">
+            <div class="bullet"></div>
+            <div class="bullet"></div>
+            <div class="bullet active"></div>
+        </div>
+    </div>
+    <img src="img/round.svg" alt="" class="round">
+</main>
+
+        <script>
+            $(function() {
+                $("body").click(function () {
+                    if($('main').attr('data-tuto') === "4") {
+                        router.loadPage("home.html");
+                    }
+                });
+            });
+        </script>
