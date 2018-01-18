@@ -172,7 +172,7 @@ body {
     width: 100%;
     height: 50px;
     background-color: #301E5C;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
@@ -295,7 +295,8 @@ li {
 
 .left {
     display: inline-block;
-    width: 40%;
+    width: 100%;
+    margin-bottom: 6px
 }
 
 .left img {
@@ -305,7 +306,6 @@ li {
 
 .right {
     float: right;
-    width: 55%;
     margin-left: 10px;
     font-family: 'AvenirMedium', sans-serif;
     font-size: 8px;
@@ -329,6 +329,7 @@ li {
 
 .right h3 {
     font-weight: lighter;
+    margin-bottom: 12px;
 }
 
 .right p {
@@ -341,6 +342,7 @@ li {
     font-weight: bolder;
     font-family: 'AvenirMedium', sans-serif;
     font-size: 10px;
+    margin-bottom: 10px;
 }
 
 .right .container {
@@ -382,6 +384,8 @@ li {
     width: 100%;
     min-height: 130vh;
     display: none;
+    margin-bottom: 75px;
+    margin-top: 50px;
 }
 
 .place:first-of-type {
